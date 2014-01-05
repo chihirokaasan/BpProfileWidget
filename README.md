@@ -1,16 +1,16 @@
 # _BpProfileWidget_
 
-_Description: BpProfileWidget can separate user categories & sub categories.
-Separated categories are displayed on WordPress widget._
+Description: BpProfileWidget can separate user categories & sub categories.
+Separated categories are displayed on WordPress widget.
 
 ## Project Setup
 
-_Important: You have to install __BuddyPress__ before enable BpProfileWidget _ 
+Important: You have to install __BuddyPress__ before enable BpProfileWidget .
 
-1. _Activate BpProfileWidget through the 'Plugins' menu in WordPress. _
-2. _BP Profile Widget drag to sidebar area._
-3. _Change Parent and Child fields._
-4. _You need to create a custom-profile Parent same.If you want to have sub categories, You need to create a custom-profile Child field same._
+1. Activate BpProfileWidget through the 'Plugins' menu in WordPress. 
+2. BP Profile Widget drag to sidebar area.
+3. Change Parent and Child fields.
+4. You need to create a custom-profile Parent same.If you want to have sub categories, You need to create a custom-profile Child field same.
 Credits
 
 ## credits
