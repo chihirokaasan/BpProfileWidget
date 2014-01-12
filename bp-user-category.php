@@ -35,7 +35,7 @@ function bpdev_include_users($qs=false){
 
 class MyWidget extends WP_Widget {
 	function __construct() {
-		$widget_ops = array('description' => 'BuddyPressのユーザープロフィールでカテゴリー分けするプラグインです');
+		$widget_ops = array('description' => 'BuddyPressのユーザーをプロフィールで分類し、ウィジェットに表示するプラグインです');
 		$control_ops = array('width' => 400, 'height' => 350);
 		parent::__construct(
 			false,
