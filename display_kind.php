@@ -48,17 +48,17 @@ $janle = $wpdb->get_results($wpdb->prepare("
 	SELECT * 
 	FROM  `wp_bp_xprofile_fields` 
 	WHERE  `group_id` =%d
-	AND  `name` LIKE  '%s'
+	AND  `name` =  '%s'
 ", $group[0]->id,$childs));
 
 $janle_child = $wpdb->get_results($wpdb->prepare("
 	SELECT * 
 	FROM  `wp_bp_xprofile_fields` 
 	WHERE  `group_id` = %d
-	AND `name` LIKE  '%s'
+	AND `name` =  '%s'
 ", $janle[0]->group_id,$childs));
 
-if(!empty($janle_child)){
+if(isset($janle_child[0]->id)){
 	$kind_child = $wpdb->get_results($wpdb->prepare("
 	SELECT * 
 	FROM  `wp_bp_xprofile_fields` 
@@ -67,8 +67,11 @@ if(!empty($janle_child)){
 }
 
 ?>
+
 <li><a href="<?php get_option('siteurl') ;?>/members/?category_id=<?php echo $field[0]->id;?>&category_name=<?php echo $kind->name;?>"><?php echo $kind->name;?></a>
-<?php if(isset($kind_child) && empty($kind_child)) :?>
+<?php if(isset($janle_child[0]->id)) :?>
+
+<?php //print_r($kind_child);?>
 <ul>
 	<?php foreach($kind_child as $child):?>
 	<li><a href="<?php get_option('siteurl') ;?>/members/?category_id=<?php echo $janle_child[0]->id;?>&category_name=<?php echo $child->name;?>"><?php echo $child->name;?></a></li>
