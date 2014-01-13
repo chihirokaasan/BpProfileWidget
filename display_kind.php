@@ -67,7 +67,6 @@ if(isset($janle_child[0]->id)){
 	WHERE  `parent_id` = %d
 ", $janle_child[0]->id));
 }
-
 ?>
 
 <li><a href="<?php get_option('siteurl') ;?>/members/?category_id=<?php echo $field[0]->id;?>&category_name=<?php echo $kind->name;?>"><?php echo $kind->name;?></a>
