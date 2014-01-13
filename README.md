@@ -13,6 +13,6 @@ Important: You have to install __BuddyPress__ before enable BpProfileWidget .
 4. You need to create a custom-profile Parent same.If you want to have sub categories, You need to create a custom-profile Child field same.
 
 ## Credits
-_This is built and maintained by [IT-kaasan](http://www.kaasan.info/)_
+_This is built and maintained by [IT-kaasan](https://github.com/chihirokaasan/BpProfileWiget)_
 
 ## License

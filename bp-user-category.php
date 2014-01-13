@@ -1,7 +1,7 @@
 <?php
 /*
-Plugin Name: BPprofilewiget
-Plugin URI: http://www.kaasan.info/
+Plugin Name: BpProfileWiget
+Plugin URI: https://github.com/chihirokaasan/BpProfileWiget
 Description: BuddyPressの親要素を持つプロフィールデーターをウィジェットにして表示するプラグイン
 Version: 0.1
 Author: ITかあさん
@@ -57,12 +57,12 @@ class MyWidget extends WP_Widget {
 		echo '<br />';
 
 	// Child of category name.
-		$text = (isset($par['child']) && $par['child']) ? $par['child'] : '';
+		$child = (isset($par['child']) && $par['child']) ? $par['child'] : '';
 		$id = $this->get_field_id('child');
 		$name = $this->get_field_name('child');
 		echo 'Child：<br />';
 		echo '<input type="text" id="'.$id.'" name="'.$name.'" value="';
-		echo trim(htmlentities($paret, ENT_QUOTES, 'UTF-8'));
+		echo trim(htmlentities($child, ENT_QUOTES, 'UTF-8'));
 		echo '" />';
 	}
 
