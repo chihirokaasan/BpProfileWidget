@@ -17,6 +17,7 @@ add_action(
 Action for members search.
 This function searches menber by param in members page.
 ***/
+if(isset($_GET['category_id']) && isset($_GET['category_name'])){
 add_action('bp_ajax_querystring','bpdev_include_users',20,1);
 function bpdev_include_users($qs=false){
 	global $wpdb;
@@ -32,6 +33,7 @@ function bpdev_include_users($qs=false){
 	$qs='include='.$include_user;
 	return $qs;
 	}
+}
 
 class MyWidget extends WP_Widget {
 	function __construct() {
