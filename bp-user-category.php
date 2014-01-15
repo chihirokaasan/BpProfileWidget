@@ -21,12 +21,18 @@ if(isset($_GET['category_id']) && isset($_GET['category_name'])){
 add_action('bp_ajax_querystring','bpdev_include_users',20,1);
 function bpdev_include_users($qs=false){
 	global $wpdb;
-	$user_id = $wpdb->get_results( "SELECT * 
+	
+	$category_id = $_GET['category_id'];
+	$category_name = $_GET['category_name'];
+	
+	$user_id = $wpdb->get_results($wpdb->prepare("
+	SELECT * 
 	FROM  `wp_bp_xprofile_data` 
-	WHERE  `field_id` ={$_GET['category_id']}
-	AND  `value` LIKE  '%{$_GET['category_name']}%'" );
-	$include_user = "";
+	WHERE  `field_id` =%d
+	AND  `value` LIKE  '%%%s%%'
+", $category_id, $category_name));
 
+	$include_user = "";
 	foreach ($user_id as $user_id) {
 		$include_user .= $user_id->user_id.',';
 	}
